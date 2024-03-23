@@ -1,6 +1,7 @@
 package Process;
 
-public class Process {
+public class Process{
+    private int burstTimeCopy;
     private int burstTime;
     private int arrivalTime;
     private int waitingTime = 0;
@@ -9,6 +10,7 @@ public class Process {
     public Process(int burstTime,int arrivalTime) {
         this.burstTime = burstTime;
         this.arrivalTime = arrivalTime;
+        this.burstTimeCopy=burstTime;
     }
 
     public int getBurstTime() {
@@ -41,5 +43,10 @@ public class Process {
 
     public void setArrivalTime(int arrivalTime) {
         this.arrivalTime = arrivalTime;
+    }
+
+
+    public int getBurstTimeCopy() {
+        return burstTimeCopy;
     }
 }
